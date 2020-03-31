@@ -1,0 +1,10 @@
+.DS_Store
+tmp/
+out/
+.gradle/
+build/
+.idea/modules
+.idea/modules.xml
+.idea/compiler.xml
+.idea/artifacts/buddy_jvm_1_0_SNAPSHOT.xml
+workspace.xml
