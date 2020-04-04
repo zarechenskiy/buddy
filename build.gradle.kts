@@ -3,6 +3,7 @@ val ktorVersion = "1.3.2"
 plugins {
     id("java")
     id("org.jetbrains.kotlin.multiplatform") version "1.3.71"
+    application
 }
 
 group = "org.buddy"
@@ -15,8 +16,6 @@ repositories {
 
 dependencies {
     testImplementation("junit:junit:5.6.1")
-    implementation("io.ktor:ktor-server-core:$ktorVersion")
-    implementation("io.ktor:ktor-server-netty:$ktorVersion")
 }
 
 kotlin {
@@ -48,8 +47,14 @@ kotlin {
         }
 
         jvm().compilations["main"].defaultSourceSet {
+            application {
+                mainClassName = "org.buddy.MainKt"
+            }
+
             dependencies {
                 implementation(kotlin("stdlib-jdk8"))
+                implementation("io.ktor:ktor-server-core:$ktorVersion")
+                implementation("io.ktor:ktor-server-netty:$ktorVersion")
             }
         }
 
