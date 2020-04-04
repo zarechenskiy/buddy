@@ -7,4 +7,7 @@ build/
 .idea/modules.xml
 .idea/compiler.xml
 .idea/artifacts/buddy_jvm_1_0_SNAPSHOT.xml
+.idea/gradle.xml
+.idea/jarRepositories.xml
+.idea/misc.xml
 workspace.xml
